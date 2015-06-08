@@ -1,0 +1,44 @@
+ <div class="section" style="margin-top:10%;">
+		<div class="container">
+			<!--   Icon Section   -->
+            <div class="row center">
+				<p>Scan QR code provided on your Aadhar card to register</p>
+                <p>Or <a class="modal-trigger" href="#otpmodal">click here</a> if you already have an OTP</p>
+
+			</div>
+            
+			<div class="row center">
+				<a class="waves-effect waves-light btn-large light-blue darken-4 z-depth-2" style="width:120px;" ng-click="scanaadhar()">SCAN</a>
+			</div>
+			<div class="row center">
+                <h2>OR</h2>
+                <div>
+                    <div>
+                Type in your 12 digit Aadhaar number below
+                 <input  type="number" pattern="[0-9]*" ng-model="aadhaarNumber" class="validate" [ng-minlength="12"] [ng-maxlength="12"]>
+                <label for="aadhaar_number_label">AADHAAR NUMBER</label>
+                    </div>
+                <a href="#!" class="white-text waves-effect waves-light btn-flat light-blue darken-4 z-depth-2" ng-click="submitAadhaarNumber()">Submit</a>
+                </div>
+            </div>
+          </div>
+	</div>
+
+<div id="otpmodal" class="modal">
+   <div class="row">
+    <form class="col s12">
+      <div class="row">
+        
+        <div class="input-field col s12">
+          <input  id="#otpnum" type="number" pattern="[0-9]*" class="validate" ng-model="otp">
+          <label for="otpnum">OTP</label>
+        </div>
+      </div>
+     
+      
+    </form>
+  </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="callKyc();">Submit</a>
+    </div>
+  </div>
